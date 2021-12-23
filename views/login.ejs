@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Login</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <div class="container-fluid wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">
+                    <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+                     alt="Udemy-logo" class="logo-image">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="dropdown">
+                    <button class="btn" type="button" id="header-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categories
+                    </button> 
+                    <div class="drop-down-menu-container">
+                        <div class="drop-down-menu-content">
+                          <div class="dropdown-menu-level-1"  aria-labelledby="dropdownMenuButton">
+                            <ul>
+                              <li class="nav-item" onmouseover="openMenuLevelTwo()"><a class="nav-link" href="#">Development</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Business</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Financy & Accounting</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">IT & Software</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Office Productivity</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Personal Development</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Design</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Marketing</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Photography & Video</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Health & Fitness</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Music</a><i class="fas fa-angle-right"></i></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Teaching & Academics</a><i class="fas fa-angle-right"></i></li>                     
+                            </ul>
+                          </div>
+                          <div class="dropdown-menu-level-2" id="menuLevelTwo">
+                              <ul>
+                                <li class="nav-item" onmouseover="openMenuLevelThree()"><a class="nav-link" href="#">Web development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Data Science</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Mobile Development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Programing Languages</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Game Development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Database Design & Development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Software Testing</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Software Engineering</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Software Development Tools</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">No-code Development</a><i class="fas fa-angle-right"></i></li>
+                            </ul>
+                          </div>  
+                          <div class="dropdown-menu-level-3" id="menuLevelThree">
+                            <ul>
+                              <li class="nav-item"><a href="" class="nav-link"><span>Populars topics</span></a></li>
+                              <li class="nav-item"><a href="" class="nav-link">JavaScript</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">React</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">CSS</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">Angular</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">NodeJS</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">PHP</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">HTML5</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">Wordpress</a></li>
+                            </ul>
+                          </div>                                 
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="header-search-bar">
+                    <form class="form-inline my-2 my-lg-0">
+                      <button class="btn search-btn btn-outline-success my-2 my-sm-0" type="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+                      <input class=" search-input form-control" type="search" placeholder="Search for anything" aria-label="Search">
+                    </form>
+                  </div>
+                  <div class="header-menu nav">
+                    <div>
+                      <div class="nav-item"><a href="" class="nav-link">Udemy Business</a></div>
+                      <div class="dropdown-menu">
+                        <div class="dropdown-menu-content">
+                          <p>Get your team access to over 6,000 top Udemy courses, anytime, anywhere.</p>
+                          <button class="btn">Try Udemy Business</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="nav-item"><a href="" class="nav-link">Teach on Udemy</a></div>
+                      <div class="dropdown-menu-2">
+                        <div class="dropdown-menu-content-2">
+                          <p>Turn what you know into an opportunity and reach millions around the world.</p>
+                          <button class="btn">Learn more</button>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                  <div class="cart-oder">
+                    <div class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                    </div>
+                    <div class="cart-dropdown-container">
+                      <div class="cart-dropdown-content">
+                        <p>Your cart is empty.</p>
+                        <button class="btn">Keep shopping</button>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn login-btn">Log in</button>
+                  <button class="btn sign-up-btn">Sign up</button>
+                  <button class="btn language-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                      <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                    </svg>
+                  </button>
+                </div>
+              </nav>
+        </header>
+        <!-- end header -->
+    </div>
+
+    <div class="login-container">
+        <div class="login-content">
+            <div class="header-login">
+                <p>Log In to Your Udemy Account!</p>
+                <hr>
+            </div>
+            
+            <div class="social-login">
+                <i class="fab fa-facebook-square"></i>
+                <p>Continue with Facebook</p>
+            </div>
+            <div class="social-login">
+                <i class="fab fa-google"></i>
+                <p>Continue with Google</p>
+            </div>
+            <div class="social-login">
+                <i class="fab fa-apple"></i>
+                <p>Continue with Facebook</p>
+            </div>
+            <form action="" name="myform" onsubmit="submitForm()">
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email" name="email">
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="text" placeholder="Password" name="password">
+                </div>
+                <button type="submit" class="login-btn-form btn" onclick="loginComplete()">Log In</button>                
+            </form>
+            <div id="snackbar"></div>
+            <div class="difference">
+                <p class="forget-pw">Or <a href="">Forgot Password</a></p>
+                <p>Don't have an account? <a href="" class="sign-up-link">Sign up</a></p>
+                <p><a href="">in with your organization</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="../index.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../fontawesome/js/all.js"></script>
+</body>
+</html>

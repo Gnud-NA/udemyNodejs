@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online courses- Learn Anything, On your Schedule</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+
+</head>
+<body>
+    <div class="wrapper container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">
+                    <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+                     alt="Udemy-logo" class="logo-image">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="dropdown">
+                    <button class="btn" type="button" id="header-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categories
+                    </button> 
+                    <div class="drop-down-menu-container">
+                        <div class="drop-down-menu-content">
+                          <div class="dropdown-menu-level-1"  aria-labelledby="dropdownMenuButton">
+                            <ul id="categories-level-1">
+                            <% for(var i = 0; i<categories.length; i++) { %>
+                            <li class="nav-item"><a class="nav-link" href="#"><%= categories[i].name %></a><i class="fas fa-angle-right"></i></li>
+                              <!-- <li class="nav-item" onmouseover="openMenuLevelTwo()"><a class="nav-link" href="#">Development</a><i class="fas fa-angle-right"></i></li> -->
+                              <% } %>
+                            </ul>
+                          </div>
+                          <div class="dropdown-menu-level-2" id="menuLevelTwo">
+                              <ul>
+                                <li class="nav-item" onmouseover="openMenuLevelThree()"><a class="nav-link" href="#">Web development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Data Science</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Mobile Development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Programing Languages</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Game Development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Database Design & Development</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Software Testing</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Software Engineering</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Software Development Tools</a><i class="fas fa-angle-right"></i></li>
+                                <li class="nav-item"><a class="nav-link" href="#">No-code Development</a><i class="fas fa-angle-right"></i></li>
+                            </ul>
+                          </div>  
+                          <div class="dropdown-menu-level-3" id="menuLevelThree">
+                            <ul>
+                              <li class="nav-item"><a href="" class="nav-link"><span>Populars topics</span></a></li>
+                              <li class="nav-item"><a href="" class="nav-link">JavaScript</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">React</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">CSS</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">Angular</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">NodeJS</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">PHP</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">HTML5</a></li>
+                              <li class="nav-item"><a href="" class="nav-link">Wordpress</a></li>
+                            </ul>
+                          </div>                                 
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="header-search-bar">
+                    <form class="form-inline my-2 my-lg-0">
+                      <button class="btn search-btn btn-outline-success my-2 my-sm-0" type="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+                      <input class=" search-input form-control" type="search" placeholder="Search for anything" aria-label="Search">
+                    </form>
+                  </div>
+                  <div class="header-menu nav">
+                    <div>
+                      <div class="nav-item"><a href="" class="nav-link">Udemy Business</a></div>
+                      <div class="dropdown-menu">
+                        <div class="dropdown-menu-content">
+                          <p>Get your team access to over 6,000 top Udemy courses, anytime, anywhere.</p>
+                          <button class="btn">Try Udemy Business</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="nav-item"><a href="" class="nav-link">Teach on Udemy</a></div>
+                      <div class="dropdown-menu-2">
+                        <div class="dropdown-menu-content-2">
+                          <p>Turn what you know into an opportunity and reach millions around the world.</p>
+                          <button class="btn">Learn more</button>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                  <div class="cart-oder">
+                    <div class="cart-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                    </div>
+                    <div class="cart-dropdown-container">
+                      <div class="cart-dropdown-content">
+                        <p id="price"></p>
+                        <p>Your cart is empty.</p>
+                        <button class="btn">Keep shopping</button>
+                      </div>
+                    </div>
+                  </div>
+                  <a href='/login' class="btn login-btn">Log in</a>
+                  <button class="btn sign-up-btn">Sign up</button>
+                  <button class="btn language-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                      <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                    </svg>
+                  </button>
+                </div>
+              </nav>
+        </header>
+        <!-- end header -->
+        <div class="banner-slide">
+          <img src="https://img-c.udemycdn.com/notices/web_banner/slide_2_image_udlite/c896f422-cbf8-421e-a22d-e492cc116c1b.jpg" alt="" class="banner-img img-fluid">
+          <div class="description-slide">
+            <h2>Develop your skills</h2>
+            <p>Learn in-demand programming languages like Python, Java, C++, and more.</p>
+          </div>
+          <button class="btn previous">
+            <i class="fas fa-chevron-circle-left"></i>
+          </button>
+          <button class="btn next">
+            <i class="fas fa-chevron-circle-right"></i>
+          </button>
+        </div>
+        <!-- end banner -->
+
+        <section class="section-course">
+          <div class="section-header">
+            <h1 class="section-title">A broad selection of courses</h1>
+            <p class="section-description">Choose from 183,000 online video courses with new additions published every month</p>
+          </div>
+
+          <div class="list-course-btn nav">
+            <div class="btn-item"><button class="btn active">Python</button></div>
+            <div class="btn-item"><button class="btn">Excel</button></div>
+            <div class="btn-item"><button class="btn">Web Development</button></div>
+            <div class="btn-item"><button class="btn">JavaScript</button></div>
+            <div class="btn-item"><button class="btn">Data Science</button></div>
+            <div class="btn-item"><button class="btn">AWS Certification</button></div>
+            <div class="btn-item"><button class="btn">Drawing</button></div>
+          </div>
+          <div class="course-information">
+            <div class="course-description">
+              <h2 class="course-title">Expand your career opportunities with Python</h2>
+              <p class="course-description">Whether you work in machine learning or finance, 
+                or are pursuing a career in web development or data science, 
+                Python is one of the most important skills you can learn. 
+                Python's simple syntax is especially suited for desktop, web, and business 
+                applications. Python's design philosophy emphasizes readability and usability.
+                 Python was
+                </p>
+                <button class="btn explore-btn">Explore Python</button>
+            </div>
+            <div class="list-courses">
+              <ul class="nav" id="list-course">
+                <% for(var i = 0; i<courses.length; i++) { %>
+                    <li class="nav-item course-item">
+                      <img src=<%=courses[i].img%> alt="" class="img-course">
+                      <div class="title"><%=courses[i].title%></div>
+                      <p class="author"><%=courses[i].author%></p>
+                      <div class="rate"></div>
+                      <div class="price"><%=courses[i].price%></div>
+                      <a class="nav-link explore-btn" href="/detail/<%=courses[i].id%>">Detail</a>
+                    </li>
+                  <% } %>
+                <!-- <li class="nav-item">
+                  <img src="../assets/images/courses/pic1.jpg" alt="">
+                  <div class="title">2022 Complete Python Bootcamp From Zero to Hero...</div>
+                  <p class="author">Jose Portilla</p>
+                  <div class="rate"></div>
+                  <div class="price">$12</div>
+                </li>
+                <li class="nav-item">
+                  <img src="../assets/images/courses/pic2.jpg" alt="">
+                  <div class="title">Machine Learning A-Z™: Hands-On Python & R In Data...</div>
+                  <p class="author">Kirill Eremenko, Hadelin de Ponteves, Ligen...</p>
+                  <div class="rate"></div>
+                  <div class="price">$15</div>
+                </li>
+                <li class="nav-item">
+                  <img src="../assets/images/courses/pic3.jpg" alt="">
+                  <div class="title">Python for Data Science and Machine Learning Bootcamp...</div>
+                  <p class="author">Jose Portilla</p>
+                  <div class="rate"></div>
+                  <div class="price">$10</div>
+                </li>
+                <li class="nav-item">
+                  <img src="../assets/images/courses/pic4.jpg" alt="">
+                  <div class="title">Learn Python Programming Masterclass</div>
+                  <p class="author">Jose Portilla</p>
+                  <div class="rate"></div>
+                  <div class="price">$13.45</div>
+                </li>
+                <li class="nav-item">
+                  <img src="../assets/images/courses/pic5.jpg" alt="">
+                  <div class="title">100 Days of Code: The Complete Python Pro...</div>
+                  <p class="author">Jose Portilla</p>
+                  <div class="rate"></div>
+                  <div class="price">$56</div>
+                </li> -->
+              </ul>
+              <div class="pagination nav">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end course -->
+
+        <footer>
+    
+        </footer>
+        <!-- end footer -->
+    </div>
+    <script src="../index.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../fontawesome/js/all.js"></script>
+</body>
+</html>
